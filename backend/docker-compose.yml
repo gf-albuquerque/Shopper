@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  db:
+    image: mysql:8
+    container_name: shopper-db
+    restart: always
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"
